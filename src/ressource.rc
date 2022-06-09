@@ -1,0 +1,51 @@
+#pragma code_page(65001)
+#include <winnt.h>
+#include <winresrc.h>
+#include "ressource.h"
+
+
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "github.com/rmoalic"
+      VALUE "FileDescription", "Shell extension for converting raw images to Jpg"
+      VALUE "FileVersion", "1.0"
+      VALUE "InternalName", "rawtojpeg"
+      VALUE "OriginalFilename", "RAWtoJPG.dll"
+      VALUE "ProductName", "RAWtoJPEG"
+      VALUE "ProductVersion", "1.0"
+    END
+  END  
+  BLOCK "VarFileInfo"
+  BEGIN
+      VALUE "Translation", LANG_ENGLISH, SUBLANG_NEUTRAL
+  END
+END
+
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_CONTEXT_MENU L"Convert to JPG"
+
+  IDS_CONVERTCOMMAND_PROGRESSDIALOG_TEXT L"Converting to JPG"
+  IDS_CONVERTCOMMAND_ASK_REPLACE_TEXT L" already exists.\nDo you want to replace it?"
+  IDS_CONVERTCOMMAND_ASK_REPLACE_TITLE L"Confirm File Replace"
+END
+
+STRINGTABLE
+LANGUAGE LANG_FRENCH, SUBLANG_NEUTRAL
+BEGIN
+  IDS_CONTEXT_MENU L"Convertir en JPG"
+
+  IDS_CONVERTCOMMAND_PROGRESSDIALOG_TEXT L"Convertion en JPG"
+  IDS_CONVERTCOMMAND_ASK_REPLACE_TEXT L" existe déjà.\nVoulez vous le remplacer?"
+  IDS_CONVERTCOMMAND_ASK_REPLACE_TITLE L"Confirmer le remplacement du fichier"
+END
+
+

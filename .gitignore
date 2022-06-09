@@ -1,0 +1,10 @@
+*.obj
+*.exp
+*.lib
+*.dll
+*.pdb
+*.ilk
+*.jpg
+*.raw
+*.nef
+*.res
