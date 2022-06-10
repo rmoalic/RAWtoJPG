@@ -17,6 +17,7 @@ jobs:
           ./build_msvc.bat
       - name: package all
         run: |
+          $env:Path += ";C:\Program Files (x86)\WiX Toolset v3.11\bin"
           ./package.bat
       - uses: actions/upload-artifact@v2
         with:
