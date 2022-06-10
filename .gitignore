@@ -8,3 +8,7 @@
 *.raw
 *.nef
 *.res
+*.msi
+*.cab
+*.wixpdb
+*.wixobj

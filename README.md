@@ -13,18 +13,24 @@ Build
 * Install MSVC
 * Start MSVC console
 * Run ```build_msvc.bat``` from the MSVC console
-* Run ```register.bat``` to install  the extension
+
+Package/install
+-------
+
+* Install WiX
+* Run ```package.bat``` to create the msi file
+* Run ```msiexec /i rawtojpg-setup.msi``` to install
 
 * Right click on a raw file en click ```Convert to JPG```
 
-* (while making changes, you will need to restart ```explorer.exe``` to unlock ```RAWtoJPG.dll```)
+* Run ```msiexec /x rawtojpg-setup.msi``` to uninstall
 
-* Run ```unregister.bat``` to uninstall  the extension
+* (while making changes, you might need to restart ```explorer.exe``` to unlock ```RAWtoJPG.dll```)
 
 TODO
 ----
 * Create UI thread (explorer window is unresponsive during convertion)
 * Try concurrent convertion
-* Replace All function
-* Installer
+* "Replace All" function
+* Encoder Options config
 * Better file association (try to find why PerceivedType image does not work)
