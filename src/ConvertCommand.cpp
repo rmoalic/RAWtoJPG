@@ -70,14 +70,17 @@ public:
                 if (FileExists(out_f)) {
                     if (AskFileReplace(dialog_id, out_f)) {
                         try {
-                            ic->convertToJpg(it, out_f);
+                            //ic->convertToJpg(it, out_f);
+                            ic->WICconvertToJpg(sfile_name, out_f);
                         }
                         catch (...) {}
                     }
                 }
                 else {
                     try {
-                        ic->convertToJpg(it, out_f);
+                        //ic->convertToJpg(it, out_f);
+                        ic->WICconvertToJpg(sfile_name, out_f);
+
                     }
                     catch (...) {}
                 }
