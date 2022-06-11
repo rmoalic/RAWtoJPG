@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-    <Product Name='RAWtoJPEG' Id='CDB2E7DB-8D18-4CB6-B5C7-C6EAE682A73B' Language="1033" Version="1.0" Manufacturer="github.com/rmoalic" UpgradeCode='506B42F2-77B5-4805-BDC5-A82D712DA567'>
+    <Product Name='RAWtoJPEG' Id='*' Language="1033" Version="1.0.1" Manufacturer="github.com/rmoalic" UpgradeCode='506B42F2-77B5-4805-BDC5-A82D712DA567'>
         <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" Platform="x64" />
 
-        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+        <MajorUpgrade AllowSameVersionUpgrades="yes" AllowDowngrades="yes" />
         <MediaTemplate />
 
         <Feature Id="ProductFeature" Title="RAWtoJPEG" Level="1">
@@ -54,6 +54,14 @@
                     <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]\RAWtoJPG.dll,-1" Type="string" />
                 </RegistryKey>
                 <RegistryKey Key="SystemFileAssociations\.cr2\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.rw2\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]\RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.rw2\shell\RAWtoJPG\command" Root="HKCR">
                     <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
                 </RegistryKey>
             </Component>
