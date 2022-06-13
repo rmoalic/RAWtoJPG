@@ -29,8 +29,7 @@ Package/install
 
 TODO
 ----
-* Create UI thread (explorer window is unresponsive during convertion)
 * Try concurrent convertion
 * "Replace All" function
-* Encoder Options config
+* Encoder Options config ([WIC](https://docs.microsoft.com/en-us/windows/win32/wic/-wic-creating-encoder#encoder-options-usage))
 * Better file association (try to find why PerceivedType image does not work)

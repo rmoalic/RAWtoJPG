@@ -4,8 +4,6 @@
 #include <sstream>
 
 ConvertProgressDialog::ConvertProgressDialog(PCWSTR title, PCWSTR sub_title, DWORD max) {
-    CoInitialize(NULL);
-
     HRESULT hr;
     hr = CoCreateInstance(CLSID_ProgressDialog, NULL, CLSCTX_INPROC_SERVER, IID_IProgressDialog, reinterpret_cast<LPVOID*>(&(this->pd)));
     if (hr != S_OK) throw "no Co";
@@ -25,6 +23,10 @@ ConvertProgressDialog::ConvertProgressDialog(PCWSTR title, PCWSTR sub_title, DWO
     olewin->Release();
 
     while (! IsWindowVisible(hwnd)) { Sleep(100); }
+}
+
+ConvertProgressDialog::~ConvertProgressDialog() {
+    if (pd != NULL) pd->Release();
 }
 
 void ConvertProgressDialog::progress() {

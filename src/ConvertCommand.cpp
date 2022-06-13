@@ -5,6 +5,7 @@
 #include <shobjidl_core.h>
 
 #include <filesystem>
+#include <thread>
 using namespace std::filesystem;
 
 extern long g_cComponents;
@@ -18,9 +19,7 @@ bool FileExists(LPCWSTR fileName) {
 
 class ConvertCommand : public IExecuteCommand, public IObjectWithSelection, public IShellExtInit {
 public:
-    bool AskFileReplace(HWND parent, LPCWSTR filename) {
-        if (this->replace_all) return true;
-
+    static bool AskFileReplace(HWND parent, LPCWSTR filename) {
         WCHAR dialog_title[50];
         LoadStringW(g_hModule, IDS_CONVERTCOMMAND_ASK_REPLACE_TITLE, (LPWSTR)&dialog_title, 49);
         WCHAR dialog_text[50];
@@ -31,35 +30,28 @@ public:
 
         return msgboxID == IDYES;
     }
-    // IShellExtInit
-    HRESULT __stdcall ConvertCommand::Initialize(PCIDLIST_ABSOLUTE pidlFolder, IDataObject* pdtobj,
-        HKEY hkeyProgID) {
-        return S_OK;
-    }
 
-    // IExecuteCommand
-    HRESULT __stdcall ConvertCommand::Execute(void) {
+    static void executeConvert(ConvertCommand* cc) {
         DWORD select_count;
-        this->m_sia->GetCount(&select_count);
+        cc->m_sia->GetCount(&select_count);
 
         WCHAR dialog_title[50];
         LoadStringW(g_hModule, IDS_CONTEXT_MENU, (LPWSTR)&dialog_title, 49);
         WCHAR dialog_text[50];
         LoadStringW(g_hModule, IDS_CONVERTCOMMAND_PROGRESSDIALOG_TEXT, (LPWSTR)&dialog_text, 49);
 
-        ConvertProgressDialog* dialog =
-            new ConvertProgressDialog(dialog_title, dialog_text, select_count);
-        HWND dialog_id = dialog->getHWND();
-        ImageConvert* ic = new ImageConvert();
+        ConvertProgressDialog dialog = ConvertProgressDialog(dialog_title, dialog_text, select_count);
+        HWND dialog_id = dialog.getHWND();
+        ImageConvert ic = ImageConvert();
 
         for (int i = 0; i < select_count; i++) {
             IShellItem* it;
-            this->m_sia->GetItemAt(i, &it);
+            cc->m_sia->GetItemAt(i, &it);
 
             LPWSTR sfile_name;
             it->GetDisplayName(SIGDN_FILESYSPATH, &sfile_name);
             path p = path(sfile_name);
-            dialog->setFileName(p.filename().c_str());
+            dialog.setFileName(p.filename().c_str());
 
             p.replace_extension(".jpg");
 
@@ -70,26 +62,40 @@ public:
                 if (FileExists(out_f)) {
                     if (AskFileReplace(dialog_id, out_f)) {
                         try {
-                            ic->convertToJpg(it, out_f);
+                            ic.convertToJpg(it, out_f);
                         }
                         catch (...) {}
                     }
                 }
                 else {
                     try {
-                        ic->convertToJpg(it, out_f);
+                        ic.convertToJpg(it, out_f);
                     }
                     catch (...) {}
                 }
             }
 
-            dialog->progress();
+            dialog.progress();
             CoTaskMemFree(sfile_name);
-            if (dialog->hasUserCancelled()) {
-                dialog->reset();
+            if (dialog.hasUserCancelled()) {
+                dialog.reset();
                 break;
             };
         }
+        cc->Release();
+    }
+
+    // IShellExtInit
+    HRESULT __stdcall ConvertCommand::Initialize(PCIDLIST_ABSOLUTE pidlFolder, IDataObject* pdtobj,
+        HKEY hkeyProgID) {
+        return S_OK;
+    }
+
+    // IExecuteCommand
+    HRESULT __stdcall ConvertCommand::Execute(void) {
+        this->AddRef();
+        std::thread convert_thread(&executeConvert, this);
+        convert_thread.detach();
         return S_OK;
     }
 
@@ -147,7 +153,10 @@ public:
 
     ConvertCommand() : m_cRef(1) { InterlockedIncrement(&g_cComponents); }
 
-    ~ConvertCommand() { InterlockedDecrement(&g_cComponents); }
+    ~ConvertCommand() {
+        if (this->m_sia) this->m_sia->Release();
+        InterlockedDecrement(&g_cComponents);
+    }
 
 private:
     long m_cRef;

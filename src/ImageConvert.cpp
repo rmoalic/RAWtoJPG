@@ -14,11 +14,13 @@ using namespace std::filesystem;
 
 
 ImageConvert::ImageConvert() {
-    CoInitialize(NULL);
-
     HRESULT hr;
     hr = CoCreateInstance(CLSID_ImageTranscode, NULL, CLSCTX_INPROC_SERVER, IID_ITranscodeImage, (LPVOID*)&(this->pTransImg));
     if (hr != S_OK) throw "no Co";
+}
+
+ImageConvert::~ImageConvert() {
+    if (pTransImg != NULL) pTransImg->Release();
 }
 
 void ImageConvert::convertToJpg(IShellItem* img, LPCWSTR out_f) {
