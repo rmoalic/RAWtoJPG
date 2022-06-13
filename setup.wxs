@@ -33,27 +33,364 @@
                     </Class>
                 </File>
 
-                <RegistryKey Key="SystemFileAssociations\.nef\shell\RAWtoJPG" Root="HKCR">
+
+                <RegistryKey Key="SystemFileAssociations\.bay\shell\RAWtoJPG" Root="HKCR">
                     <RegistryValue Value="Convert to JPG" Type="string" />
-                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]\RAWtoJPG.dll,-1" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
                 </RegistryKey>
-                <RegistryKey Key="SystemFileAssociations\.nef\shell\RAWtoJPG\command" Root="HKCR">
+                <RegistryKey Key="SystemFileAssociations\.bay\shell\RAWtoJPG\command" Root="HKCR">
                     <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
                 </RegistryKey>
 
-                <RegistryKey Key="SystemFileAssociations\.raw\shell\RAWtoJPG" Root="HKCR">
+                <RegistryKey Key="SystemFileAssociations\.bmq\shell\RAWtoJPG" Root="HKCR">
                     <RegistryValue Value="Convert to JPG" Type="string" />
-                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]\RAWtoJPG.dll,-1" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
                 </RegistryKey>
-                <RegistryKey Key="SystemFileAssociations\.raw\shell\RAWtoJPG\command" Root="HKCR">
+                <RegistryKey Key="SystemFileAssociations\.bmq\shell\RAWtoJPG\command" Root="HKCR">
                     <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
                 </RegistryKey>
 
                 <RegistryKey Key="SystemFileAssociations\.cr2\shell\RAWtoJPG" Root="HKCR">
                     <RegistryValue Value="Convert to JPG" Type="string" />
-                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]\RAWtoJPG.dll,-1" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
                 </RegistryKey>
                 <RegistryKey Key="SystemFileAssociations\.cr2\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.crw\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.crw\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.cs1\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.cs1\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.dc2\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.dc2\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.dcr\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.dcr\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.dng\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.dng\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.erf\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.erf\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.fff\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.fff\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.hdr\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.hdr\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.k25\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.k25\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.kdc\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.kdc\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.mdc\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.mdc\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.mos\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.mos\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.mrw\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.mrw\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.nef\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.nef\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.orf\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.orf\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.pef\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.pef\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.pxn\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.pxn\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.raf\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.raf\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.raw\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.raw\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.rdc\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.rdc\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.sr2\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.sr2\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.srf\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.srf\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.x3f\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.x3f\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.arw\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.arw\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.3fr\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.3fr\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.cine\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.cine\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.ia\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.ia\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.kc2\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.kc2\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.mef\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.mef\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.nrw\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.nrw\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.qtk\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.qtk\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.rw2\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.rw2\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.sti\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.sti\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.rwl\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.rwl\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.srw\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.srw\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.drf\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.drf\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.dsc\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.dsc\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.ptx\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.ptx\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.cap\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.cap\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.iiq\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.iiq\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.rwz\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.rwz\shell\RAWtoJPG\command" Root="HKCR">
+                    <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
+                </RegistryKey>
+
+                <RegistryKey Key="SystemFileAssociations\.cr3\shell\RAWtoJPG" Root="HKCR">
+                    <RegistryValue Value="Convert to JPG" Type="string" />
+                    <RegistryValue Name="MUIVerb" Value="@[INSTALLFOLDER]RAWtoJPG.dll,-1" Type="string" />
+                </RegistryKey>
+                <RegistryKey Key="SystemFileAssociations\.cr3\shell\RAWtoJPG\command" Root="HKCR">
                     <RegistryValue Name="DelegateExecute" Value="{7F101FB8-F82A-49E8-BF5D-EB38F2C0521C}" Type="string" />
                 </RegistryKey>
             </Component>
