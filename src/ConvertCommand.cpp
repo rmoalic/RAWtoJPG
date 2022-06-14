@@ -82,7 +82,7 @@ public:
             HRESULT convert_hr = S_OK;
             if (lstrcmpW(sfile_name, out_f) != 0) {
                 if (FileExists(out_f)) {
-                    if (AskFileReplace(dialog_id, out_f)) {
+                    if (cc->replace_all || AskFileReplace(dialog_id, out_f)) {
                         convert_hr = ic.convertToJpg(it, out_f);
                     }
                 }
@@ -125,7 +125,10 @@ public:
         return S_OK;
     }
 
-    HRESULT __stdcall ConvertCommand::SetKeyState(DWORD keystate) { return S_OK; }
+    HRESULT __stdcall ConvertCommand::SetKeyState(DWORD keystate) {
+        this->replace_all = keystate & MK_CONTROL;
+        return S_OK;
+    }
     HRESULT __stdcall ConvertCommand::SetParameters(LPCWSTR parameters) { return S_OK; }
     HRESULT __stdcall ConvertCommand::SetPosition(POINT point) { return S_OK; }
     HRESULT __stdcall ConvertCommand::SetShowWindow(int show) { return S_OK; }

@@ -21,7 +21,7 @@ Package/install
 * Run ```package.bat``` to create the msi file
 * Run ```msiexec /i rawtojpg-setup.msi``` to install
 
-* Right click on a raw file en click ```Convert to JPG```
+* Right click on a raw file en click ```Convert to JPG``` (ctrl + click to replace all)
 
 * Run ```msiexec /x rawtojpg-setup.msi``` to uninstall
 
@@ -30,6 +30,5 @@ Package/install
 TODO
 ----
 * Try concurrent convertion
-* "Replace All" function
 * Encoder Options config ([WIC](https://docs.microsoft.com/en-us/windows/win32/wic/-wic-creating-encoder#encoder-options-usage))
 * Better file association (try to find why PerceivedType image does not work)
