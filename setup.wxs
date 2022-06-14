@@ -4,7 +4,7 @@
         <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" Platform="x64" />
 
         <MajorUpgrade AllowDowngrades="yes" />
-        <MediaTemplate />
+        <MediaTemplate EmbedCab="yes" />
 
         <Feature Id="ProductFeature" Title="RAWtoJPEG" Level="1">
             <ComponentGroupRef Id="ProductComponents" />
