@@ -23,17 +23,24 @@ ImageConvert::~ImageConvert() {
     if (pTransImg != NULL) pTransImg->Release();
 }
 
-void ImageConvert::convertToJpg(IShellItem* img, LPCWSTR out_f) {
+HRESULT ImageConvert::convertToJpg(IShellItem* img, LPCWSTR out_f) {
     IStream* out;
     HRESULT hr;
     hr = SHCreateStreamOnFileW(out_f, STGM_CREATE | STGM_WRITE, &out);
-    if (hr != S_OK) throw "no File";
+    if (hr != S_OK) return hr;
 
     hr = this->pTransImg->TranscodeImage(img, 0, 0, TI_JPEG, out, NULL, NULL);
     if (hr != S_OK) {
         out->Release();
-        throw "no Transcode";
+        DeleteFileW(out_f);
+        return hr;
     }
-    out->Commit(STGC_DEFAULT);
+    hr = out->Commit(STGC_DEFAULT);
+    if (hr != S_OK) {
+        out->Release();
+        DeleteFileW(out_f);
+        return hr;
+    }
     out->Release();
+    return S_OK;
 }

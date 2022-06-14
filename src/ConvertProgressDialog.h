@@ -11,6 +11,7 @@ public:
     void setMax(DWORD max);
     void setFileName(PCWSTR name);
     void reset();
+    void close();
     HWND getHWND();
     bool hasUserCancelled();
 

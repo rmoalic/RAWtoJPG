@@ -7,7 +7,7 @@ class ImageConvert {
 public:
     ImageConvert();
     ~ImageConvert();
-    void convertToJpg(IShellItem* img, LPCWSTR out_f);
+    HRESULT convertToJpg(IShellItem* img, LPCWSTR out_f);
 
 private:
     ITranscodeImage* pTransImg = NULL;

@@ -2,10 +2,13 @@
 #include "ConvertProgressDialog.h"
 #include "ImageConvert.h"
 #include "ressource.h"
+#include "comdef.h"
 #include <shobjidl_core.h>
 
 #include <filesystem>
 #include <thread>
+#include <sstream>
+
 using namespace std::filesystem;
 
 extern long g_cComponents;
@@ -31,6 +34,23 @@ public:
         return msgboxID == IDYES;
     }
 
+    static bool ErrorDialog(HWND parent, HRESULT last_error) {
+        WCHAR dialog_title[50];
+        LoadStringW(g_hModule, IDS_CONTEXT_MENU, (LPWSTR)&dialog_title, 49);
+        WCHAR dialog_text[100];
+        LoadStringW(g_hModule, IDS_CONVERTCOMMAND_ERROR_TEXT, (LPWSTR)&dialog_text, 99);
+
+        _com_error err(last_error);
+
+        std::wstringstream stream;
+        stream << dialog_text << L"\n\ncode: 0x" << std::hex << last_error << L" (" << err.ErrorMessage() << L")";
+
+        int msgboxID = MessageBoxW(parent, stream.str().c_str(),
+            dialog_title, MB_SETFOREGROUND | MB_ICONERROR | MB_OK);
+
+        return msgboxID == IDYES;
+    }
+
     static void executeConvert(ConvertCommand* cc) {
         DWORD select_count;
         cc->m_sia->GetCount(&select_count);
@@ -43,6 +63,7 @@ public:
         ConvertProgressDialog dialog = ConvertProgressDialog(dialog_title, dialog_text, select_count);
         HWND dialog_id = dialog.getHWND();
         ImageConvert ic = ImageConvert();
+        HRESULT last_error_hr = S_OK;
 
         for (int i = 0; i < select_count; i++) {
             IShellItem* it;
@@ -58,30 +79,35 @@ public:
             std::wstring out_file = std::wstring(p.wstring());
             LPCWSTR out_f = out_file.c_str();
 
+            HRESULT convert_hr = S_OK;
             if (lstrcmpW(sfile_name, out_f) != 0) {
                 if (FileExists(out_f)) {
                     if (AskFileReplace(dialog_id, out_f)) {
-                        try {
-                            ic.convertToJpg(it, out_f);
-                        }
-                        catch (...) {}
+                        convert_hr = ic.convertToJpg(it, out_f);
                     }
                 }
                 else {
-                    try {
-                        ic.convertToJpg(it, out_f);
-                    }
-                    catch (...) {}
+                    convert_hr = ic.convertToJpg(it, out_f);
                 }
+            }
+            if (convert_hr != S_OK) {
+                last_error_hr = convert_hr;
             }
 
             dialog.progress();
             CoTaskMemFree(sfile_name);
             if (dialog.hasUserCancelled()) {
-                dialog.reset();
+                dialog.close();
                 break;
             };
         }
+
+        dialog.reset();
+        if (last_error_hr != S_OK) {
+            ErrorDialog(dialog_id, last_error_hr);
+        }
+        dialog.close();
+
         cc->Release();
     }
 

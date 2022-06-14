@@ -34,10 +34,6 @@ void ConvertProgressDialog::progress() {
 
     pd->SetProgress(this->curr, this->max);
     this->updateTitle1();
-
-    if (this->curr >= this->max) {
-        this->reset();
-    }
 }
 
 void ConvertProgressDialog::updateTitle1() {
@@ -54,6 +50,10 @@ void ConvertProgressDialog::reset() {
     this->curr = 0;
     pd->SetLine(1, L"", false, NULL);
     pd->SetLine(2, L"", false, NULL);
+}
+
+void ConvertProgressDialog::close() {
+    this->reset();
     pd->StopProgressDialog();
 }
 
