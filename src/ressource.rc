@@ -4,8 +4,8 @@
 
 
 1 VERSIONINFO
-FILEVERSION     1,0,0,0
-PRODUCTVERSION  1,0,0,0
+FILEVERSION     1,1,0,0
+PRODUCTVERSION  1,1,0,0
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
@@ -13,11 +13,11 @@ BEGIN
     BEGIN
       VALUE "CompanyName", "github.com/rmoalic"
       VALUE "FileDescription", "Shell extension for converting raw images to Jpg"
-      VALUE "FileVersion", "1.0"
+      VALUE "FileVersion", "1.1"
       VALUE "InternalName", "rawtojpeg"
       VALUE "OriginalFilename", "RAWtoJPG.dll"
       VALUE "ProductName", "RAWtoJPEG"
-      VALUE "ProductVersion", "1.0"
+      VALUE "ProductVersion", "1.1"
     END
   END  
   BLOCK "VarFileInfo"
