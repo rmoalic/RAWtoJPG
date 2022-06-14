@@ -3,9 +3,9 @@ RAWtoJPG
 
 This is a windows shell extension to (batch) convert RAW files to JPG.
 
-Uses the [Windows store raw extensions](https://apps.microsoft.com/store/detail/extension-dimage-raw/9NCTDW2W1BH8?hl=fr-fr&gl=FR) (internaly [libraw](https://www.libraw.org/about)) or any [WIC codec](https://www.photools.com/1167/wic-support-codec-availability/)). With default settings.
+Uses the [Windows store raw extensions](https://apps.microsoft.com/store/detail/extension-dimage-raw/9NCTDW2W1BH8?hl=fr-fr&gl=FR) (internaly [libraw](https://www.libraw.org/about)) or any [WIC codec](https://www.photools.com/1167/wic-support-codec-availability/). With default settings.
 
-To get better result, use a proper raw developer like [darktable](raw developer) or [lightroom](https://www.adobe.com/fr/products/photoshop-lightroom.html).
+To get better result, use a proper raw developer like [darktable](https://www.darktable.org/) or [lightroom](https://www.adobe.com/fr/products/photoshop-lightroom.html).
 
 ![Screenshot](screen.png)
 ![Screenshot](screen2.png)
